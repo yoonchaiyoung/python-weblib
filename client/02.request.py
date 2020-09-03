@@ -28,7 +28,7 @@ data = {
 
 data = urlencode(data).encode('utf-8')
 
-request('https://nid.naver.com/nidlogin.login', data)
+request = Request('https://nid.naver.com/nidlogin.login', data)
 request.add_header('Content-Type', 'text/html')
 
 urlopen(request)
@@ -40,7 +40,7 @@ data = {
 
 data = urlencode(data).encode('utf-8')
 
-request('https://www.example.com', data)
+request = Request('https://www.example.com', data)
 request.add_header('Content-Type', 'text/html')
 
 urlopen(request)
